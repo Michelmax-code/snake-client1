@@ -8,9 +8,6 @@ const connect = function() {
     port: 50542, }, () => {
     console.log("Connected with game server!");
     conn.write(`Name: MAJ`);
-    setTimeout(() => {
-      conn.write("Move: up");
-    }, 3000);
     conn.on('data', (data) => {
       console.log('message from server', data);
     });
@@ -22,7 +19,7 @@ const connect = function() {
 
   const name = 'MAJ';
   conn.write(`Name: ${name}`);
-  conn.write('Move: up');
+  //conn.write('Move: up');
 
   return conn;
 };
