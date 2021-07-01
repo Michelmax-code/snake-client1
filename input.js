@@ -10,6 +10,12 @@ const handleUserInput = function(key) {
     connection.write("Move: down");
   } else if (key === 'd') {
     connection.write("Move: right");
+  } else if (key === 'p') {
+    connection.write("Say: I'm fast!");
+  } else if (key === 'o') {
+    connection.write("Say: I like donuts");
+  } else if (key === 'i') {
+    connection.write("Say: I need shoes!");
   }
 };
 
